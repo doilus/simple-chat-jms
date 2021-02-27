@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <Connectors>
+    <Connector scheme="tcp">
+      <ConnectionFactories>
+        <ConnectionFactory name="ConnectionFactory" />
+      </ConnectionFactories>
+    </Connector>
+    <Connector scheme="rmi">
+      <ConnectionFactories>
+        <QueueConnectionFactory name="JmsQueueConnectionFactory" />
+        <TopicConnectionFactory name="JmsTopicConnectionFactory" />
+      </ConnectionFactories>
+    </Connector>
+  </Connectors>
+
+  <AdministeredDestinations>
+    <AdministeredTopic name="topic1">
+      <Subscriber name="sub1" />
+      <Subscriber name="sub2" />
+    </AdministeredTopic>
+
+    <AdministeredQueue name="queue1" />
+    <AdministeredQueue name="queue2" />
+    <AdministeredQueue name="queue3" />
+  </AdministeredDestinations>
+ 
